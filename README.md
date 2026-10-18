@@ -1,78 +1,25 @@
-# todo-fronted
+# TODO App - Frontend
 
-Scaffolded with Vuetify CLI.
+Web interface for a TODO app with user accounts.
 
-## ❗️ Documentation
+**Tech stack:** Vue 3, Vuetify, Vue Router, TypeScript, Vite
 
-- Primary docs: https://vuetifyjs.com/
-- Getting started guide: https://vuetifyjs.com/en/getting-started/installation/
-- Community support: https://community.vuetifyjs.com/
-- Issue tracker: https://issues.vuetifyjs.com/
+## Features
 
-## 🧱 Stack
+- Register and log in
+- Add, tick off and delete your own TODOs
+- Stays logged in until the login token expires
 
-- Framework: Vue 3 + Vite
-- UI Library: Vuetify
-- Language: TypeScript
-- Package manager: npm
+## Setup
 
-## 🧭 Start Here
+1. Start the backend first: https://github.com/xicaichong-lgtm/todo-backend
+2. Install dependencies and start the frontend:
 
-- Main entry: `src/main.ts`
-- Main app component: `src/App.vue`
-- Main styles: `src/styles/`
-- Plugin setup: `src/plugins/`
-
-## 📁 Project Structure
-
-- `src/main.ts` — application entry point
-- `src/App.vue` — root component
-- `src/components/` — reusable Vue components
-- `src/plugins/` — plugin registration and setup
-- `src/styles/` — global styles and theme settings
-- `public/` — static public files
-
-## ✨ Enabled Features
-
-- ESLint
-- Vue Router
-
-## 💿 Install
-
-Use your selected package manager (npm) to install dependencies:
-
-```bash
-npm install
 ```
-
-## 🚀 Quick Start
-
-```bash
 npm install
 npm run dev
 ```
 
-## 🏗️ Build
+3. Open http://localhost:3001 in your browser.
 
-```bash
-npm run build
-```
-
-## 🧪 Available Scripts
-
-- `npm run dev`
-- `npm run build`
-- `npm run preview`
-- `npm run build-only`
-- `npm run type-check`
-- `npm run lint`
-- `npm run lint:fix`
-
-## 💪 Support Vuetify Development
-
-This project uses Vuetify - an MIT licensed Open Source project. We are glad to welcome contributors and any support for ongoing development:
-
-- Contribute to Vuetify and ecosystem projects: https://github.com/vuetifyjs
-- Request enterprise support: https://support.vuetifyjs.com/
-- Sponsor on GitHub: https://github.com/sponsors/vuetifyjs
-- Support on Open Collective: https://opencollective.com/vuetify
+The frontend expects the backend at http://localhost:3000.
