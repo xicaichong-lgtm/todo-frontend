@@ -14,6 +14,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { API_URL } from '@/config'
 
 const router = useRouter()
 const email = ref('')

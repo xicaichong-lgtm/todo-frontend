@@ -34,6 +34,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { API_URL } from '@/config'
 
 interface Todo {
   id: number
@@ -53,7 +54,7 @@ async function loadTodos () {
     router.push('/login')
     return
   }
-  const res = await fetch('http://localhost:3000/todos', {
+  const res = await fetch(`${API_URL}/todos`, {
     headers: { Authorization: `Bearer ${token}` },
   })
   if (res.status === 401) {
@@ -70,7 +71,7 @@ async function addTodo () {
   if (!title) return
 
   const token = localStorage.getItem('token')
-  const res = await fetch('http://localhost:3000/todos', {
+  const res = await fetch(`${API_URL}/todos`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -90,7 +91,7 @@ async function addTodo () {
 
 async function toggleTodo (todo: Todo) {
   const token = localStorage.getItem('token')
-  const res = await fetch(`http://localhost:3000/todos/${todo.id}`, {
+  const res = await fetch(`${API_URL}/todos/${todo.id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -111,7 +112,7 @@ async function toggleTodo (todo: Todo) {
 
 async function deleteTodo (todo: Todo) {
   const token = localStorage.getItem('token')
-  const res = await fetch(`http://localhost:3000/todos/${todo.id}`, {
+  const res = await fetch（`${API_URL}/todos/(${todo.id}`, {
     method: 'DELETE',
     headers: { Authorization: `Bearer ${token}` },
   })

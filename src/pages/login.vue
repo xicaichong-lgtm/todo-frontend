@@ -14,6 +14,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { API_URL } from '@/config'
 
 const router = useRouter()
 const email = ref('')
@@ -22,7 +23,7 @@ const error = ref('')
 
 async function login () {
   error.value = ''
-  const res = await fetch('http://localhost:3000/auth/login', {
+  const res = await fetch(`${API_URL}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: email.value, password: password.value }),
