@@ -112,7 +112,7 @@ async function toggleTodo (todo: Todo) {
 
 async function deleteTodo (todo: Todo) {
   const token = localStorage.getItem('token')
-  const res = await fetch（`${API_URL}/todos/(${todo.id}`, {
+  const res = await fetch(`${API_URL}/todos/${todo.id}`, {
     method: 'DELETE',
     headers: { Authorization: `Bearer ${token}` },
   })
